@@ -1,0 +1,6 @@
+.env
+init-db.js
+.git
+__pycache__/
+*.pyc
+mongodb_data/

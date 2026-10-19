@@ -1,0 +1,20 @@
+services:
+  core_api:
+    build: .
+    container_name: "PokerCard"
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+  poker_db:
+    image: mongo:latest
+    container_name: "PokerDB"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb_data:/data/db
+      - ./init-db.js:/docker-entrypoint-initdb.d/init-db.js:ro
+    
