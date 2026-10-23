@@ -6,3 +6,6 @@ __pycache__
 venv
 config
 .DS_Store
+.env 
+runtime.txt 
+reuquirements.txt
